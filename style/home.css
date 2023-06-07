@@ -1,0 +1,612 @@
+body{
+    height: 150vh;
+    overflow-x: hidden;
+}
+
+#motivo_sancion{
+    position: absolute;
+    padding: 8px;
+    border-radius: 16px;
+    top : 23.5%;
+    cursor: pointer;
+    left : 72%;
+}
+
+#medida_correctora{
+    position: absolute;
+    padding: 8px;
+    border-radius: 16px;
+    top : 34%;
+    cursor: pointer;
+    left : 72%;
+}
+
+#cargar {
+    display: none;
+    width: 256px;
+    height: 256px;
+    border-radius: 100%;
+    background-color: "rgb(18 18 18)";
+    border-top: 8px solid rgb(66,139,202);
+    border-right: 8px solid rgb(66,139,202);
+    border-bottom: 8px solid rgb(66,139,202);
+    border-left: 8px solid rgba(66,139,202,.2);
+
+    animation : circulo 1s infinite linear;
+   
+
+    position: absolute;
+    top : 72%;
+    left : 40%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes circulo{
+    0% {
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+.encabezado{
+    height: 80px;
+    width: 100%;
+    object-fit: cover;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 16px;
+}
+
+.encabezado_div h1{
+    font-family: monospace;
+    text-align: center;
+    background-color: #242961;
+    color : #fff;
+    font-size: 40px;
+    position: relative;
+    top : -96px;
+}
+
+
+.cerrarsesion{
+    position: relative;
+    left : 80%;
+    top : -180px;
+    padding: 16px;
+    width: 256px;
+    border-radius: 9999px;
+}
+
+
+.cerrarsesion a{
+    font-size : 24px;
+    font-family : monospace;
+    color : #000;
+    text-decoration : none;
+    font-weight: bold;
+}
+
+.menu_div{
+    display: inline;
+
+}
+
+
+
+.menu_div div img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 9999px;
+    box-shadow: 2px 12px 5px #999;
+    cursor: pointer;
+}
+.menu_div div img:hover{
+    transition: 0.5s;
+    box-shadow: 2px 18px 5px #242961;
+}
+
+
+.menu_div div{
+    width: 240px;
+}
+
+.menu_div div p{
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 4px;
+    margin-left : -32px;
+}
+
+.menu_div div:nth-child(1) {
+    position: absolute;
+    top : 80px;
+    left : 70px;
+}
+.menu_div div:nth-child(2) {
+    position: absolute;
+    top : 80px;
+    left : 310px;
+}
+.menu_div div:nth-child(3) {
+    position: absolute;
+    top : 80px;
+    left : 550px;
+}
+.menu_div div:nth-child(4) {
+    position: absolute;
+    top : 80px;
+    left : 790px;
+}
+
+.menu_div div:nth-child(5) {
+    position: absolute;
+    top : 80px;
+    left : 1030px;
+}
+.menu_div div:nth-child(6) {
+    position: absolute;
+    top : 80px;
+    left : 1270px;
+}
+
+#contenedor{
+    position: relative;
+    left : 50%;
+    
+    transform: translate(-50%, 0%);
+    top : 120px;
+    height: 700px;
+    width: 80%;
+    margin-bottom: 16px;
+
+    border-radius: 32px;
+    border : 2px black solid;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* DOM */
+
+.titulo_contenedor{
+    font-family: monospace;
+    text-align: center;
+    background-color: #242961;
+    color : #fff;
+    font-size: 32px;
+    position: relative;
+}
+
+.parrafo_contenedor{
+    font-family: monospace;
+    text-align: center;
+    background-color: #8288c3;
+    color : #fff;
+    font-size: 16px;
+    position: relative;
+    font-style: italic;
+}
+
+.parrafo_contenedor2{
+    font-family: monospace;
+    text-align: center;
+    background-color: #d3d5eb;
+    color : rgb(0, 0, 0);
+    font-size: 16px;
+    position: relative;
+    font-style: italic;
+}
+
+
+.contenedor_asignaturas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor_alumnos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.icono_alumno{
+    margin : 16px;
+    
+}
+
+.div_asignatura{
+    margin : 16px;
+}
+
+.icono_alumno{
+    height: 240px;
+    width: 240px;
+    border-radius: 9999px;
+    box-shadow: 2px 2px 5px #999;
+    cursor : pointer;
+    object-fit: cover;
+}
+
+
+
+.div_asignatura img{
+    height: 240px;
+    width: 240px;
+    border-radius: 9999px;
+    box-shadow: 2px 2px 5px #999;
+
+    object-fit: cover;
+}
+.div_asignatura p{
+    text-align: center;
+    font-family: monospace;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#nueva_causa{
+    height : 180px ; 
+    width : 180px ; 
+    position : absolute ; 
+    cursor : pointer ; 
+    left : 32px;
+}
+
+
+/* css modal*/
+
+#modal_nueva_causa{
+    height: 360px;
+    width: 360px;
+    overflow: hidden;
+}
+
+#modal_nueva_causa h1{
+    font-family: monospace;
+    text-align: center;
+    background-color: #242961;
+    color : #fff;
+    font-size: 32px;
+    position: relative;
+}
+
+#modal_nueva_causa p{
+    font-family: monospace;
+    text-align: center;
+    background-color: #8288c3;
+    color : #fff;
+    font-size: 16px;
+    position: relative;
+    font-style: italic;
+}
+
+#modal_nueva_causa textarea{
+    width: 356px;
+    height: 180px;
+    font-size: 20px;
+    resize:none;
+}
+
+
+#aceptar_modal{
+    padding: 16px;
+    border-radius: 64px;
+    background-color: #242961;
+    color : #fff;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    width: 160px;
+    position: relative;
+    left : 4%;
+}
+
+#atras_modal{
+    padding: 16px;
+    border-radius: 64px;
+    background-color: #c5c5cb;
+    color : rgb(0, 0, 0);
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    width: 160px;
+    position: relative;
+    left : 8%;
+}
+            
+
+#texto_resumen{
+
+    font-family: monospace;
+    text-align: center;
+    background-color: #cfd2f5;
+    color : rgb(0, 0, 0);
+    font-size: 14px;
+    position: relative;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#aceptar_falta, #sancion_directa, #continuar{
+    height: 320px;
+    width: 320px;
+    position: relative;
+    left : 37%;
+    cursor: pointer;
+    border-radius: 9999px;
+    box-shadow: 2px 12px 5px #999;
+}
+
+#fecha_actual{
+    position: relative;
+    left : 40%;
+    width: 20%;
+    height: 48px;
+    font-size: 24px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+/* EL OTRO MODAL */
+
+#input_sancion{
+    width: 356px;
+    height: 180px;
+    font-size: 20px;
+    resize:none;
+    width: 360px;
+    position: relative;
+    left : 23%;
+
+}
+
+#modal_sancion{
+    overflow-y: hidden;
+    height: 640px;
+    width: 640px;
+}
+
+#select_motivo, #select_medidas{
+    width: 256px;
+    position: relative;
+    left : 30%;
+}
+
+#aceptar_modal_sancion, #atras_modal_sancion{
+    position: relative;
+    top : -64px;
+}
+
+#fecha_comienzo, #fecha_final{
+    position: relative;
+    left : 12%;
+}
+
+.labelFechas{
+    position: relative;
+    top : -32px;
+    left : 27%;
+}
+
+#enviar_sancion{
+    padding: 16px;
+    border-radius: 64px;
+    background-color: #242961;
+    color : #fff;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    width: 160px;
+    position: relative;
+    left : 45%;
+    top : 0px
+}
+
+#aceptar_modal_sancion{
+    padding: 16px;
+    border-radius: 64px;
+    background-color: #242961;
+    color : #fff;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    width: 160px;
+    position: relative;
+    left : -36%;
+    top : 60px
+}
+
+#atras_modal_sancion{
+    padding: 16px;
+    border-radius: 64px;
+    background-color: #c5c5cb;
+    color : rgb(0, 0, 0);
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    width: 160px;
+    position: relative;
+    left : 54%;
+    top : 0px;
+}
+/*
+            RESPONSIVE
+
+*/
+
+@media screen and (min-width : 100px) and (max-width : 800px) {
+
+    #aceptar_falta{
+    
+        left : 4%;
+      
+    }
+
+    body{
+        overflow-x: hidden;
+       
+    }
+    #contenedor{
+        height: 2500px;
+    }
+
+    .menu_div div p{
+        font-size: 32px;
+        font-weight: bold;
+        font-family: monospace;
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 4px;
+       
+    }
+
+    .cerrarsesion{
+        position: relative;
+        left : 25%;
+        top : -100px;
+        padding: 16px;
+        width: 256px;
+        border-radius: 9999px;
+    }
+
+
+    .menu_div{
+        height: 640px;
+        width: 320px;
+    }
+
+    .menu_div div:nth-child(1) p {
+        position: absolute;
+        top : 120px;
+        left : 4px;
+        
+    }
+
+    .menu_div div:nth-child(2) p {
+        position: absolute;
+        top : 160px;
+        left : -288px;
+    }
+
+    .menu_div div:nth-child(3) p {
+        position: absolute;
+        top : 200px;
+        left : -576px;
+    }
+
+    .menu_div div:nth-child(4) p {
+        position: absolute;
+        top : 240px;
+        left : -864px;
+    }
+
+    .menu_div div:nth-child(5) p {
+        position: absolute;
+        top : 280px;
+        left : -1152px;
+    }
+
+    .menu_div div img{
+       display : none;
+    }
+
+  
+    
+
+
+
+}
+
+@media screen and (min-width : 800px) and (max-width : 1100px) {
+
+    #contenedor{
+        height: 1600px;
+    }
+
+  
+    .menu{
+        height: 180px;
+        width: 180px;
+        object-fit: cover;
+        border-radius: 9999px;
+        border : 2px black solid;
+    }
+
+    .menu_div div{
+        width: 184px;
+    }
+
+    .menu_div div p{
+        font-size: 12px;
+        font-weight: bold;
+        font-family: monospace;
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 4px;
+    }
+
+    .menu_div div {
+        position: absolute;
+        top : 160px;
+        left : 20px;
+    }
+   
+}
+
+@media screen and (min-width : 1100px) and (max-width : 1300px){
+    .contenedor_alumnos p{
+        display: hidden;
+    }
+}
+
+
+/* LISTADO*/
+
+.botonlistado{
+    display: block;
+    padding: 16px;
+    width: 640px;
+    font-size: 28px;
+    font-family: monospace;
+    border-radius: 9999px;
+    margin: 16px;
+    position: relative;
+    left : 22%;
+    font-weight: bold;
+    cursor: pointer;
+    
+    
+    
+    
+
+}
+
+
+#parrafo_listado{
+    font-family: monospace;
+    font-size: 16px;
+    margin: 4px;
+}
+
+#botonPDF{
+
+    position: relative;
+    top : -8px;
+    font-family: monospace;
+    font-size: 22px;
+    background-color: #8288c3;;
+    padding: 16px;
+    width: 256px;
+    left : 8px;
+    color : #fff;
+    border-radius: 9999px;
+}
